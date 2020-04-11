@@ -46,7 +46,7 @@ function initCow() {
 
 function checkCow(e) {
   if (find === true) { return }
-  if (Math.abs(e.clientX - cowX) < 20 && Math.abs(e.clientY- cowY) < 10) {
+  if (Math.abs(e.clientX - cowX) < 10 && Math.abs(e.clientY- cowY) < 10) {
     find = true
     $('#cowImg').attr('src', 'cow.jpg');
     $('#cowImg').addClass('animate-in')
@@ -55,15 +55,15 @@ function checkCow(e) {
       audio.play() 
     },1500);
     return
-  } else if (Math.abs(e.clientX - cowX) < 60 && Math.abs(e.clientY- cowY) < 30) {
+  } else if (Math.abs(e.clientX - cowX) < 60 && Math.abs(e.clientY- cowY) < 60) {
     audio.volume = 1
-  } else if (Math.abs(e.clientX - cowX) < 80 && Math.abs(e.clientY- cowY) < 40) {
+  } else if (Math.abs(e.clientX - cowX) < 120 && Math.abs(e.clientY- cowY) < 120) {
     audio.volume = 0.75
-  } else if (Math.abs(e.clientX - cowX) < 100 && Math.abs(e.clientY- cowY) < 50) {
+  } else if (Math.abs(e.clientX - cowX) < 100 && Math.abs(e.clientY- cowY) < 100) {
     audio.volume = 0.55
-  } else if (Math.abs(e.clientX - cowX) < 200 && Math.abs(e.clientY- cowY) < 100) {
+  } else if (Math.abs(e.clientX - cowX) < 200 && Math.abs(e.clientY- cowY) < 200) {
     audio.volume = 0.35
-  } else if (Math.abs(e.clientX - cowX) < 400 && Math.abs(e.clientY- cowY) < 200) {
+  } else if (Math.abs(e.clientX - cowX) < 400 && Math.abs(e.clientY- cowY) < 400) {
     audio.volume = 0.15
   } else {
     audio.volume = 0.08
