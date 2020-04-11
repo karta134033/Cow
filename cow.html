@@ -6,7 +6,7 @@
   <img 
     src="icon.png"
     width="2%"
-    style="opacity: 0;">
+    style="opacity: 0; display: none;">
   <div
     id="init" 
     style="height: 100%; display: flex; align-items: center; justify-content: center;"
@@ -23,7 +23,7 @@
   >
     <img
       id="cowImg" 
-      src="cow.jpg"
+      src="icon.png"
     >
   </div>
 </body>
@@ -42,6 +42,7 @@ function initCow() {
 function checkCow(e) {
   if (find === true) { return }
   if (Math.abs(e.clientX - cowX) < 30 && Math.abs(e.clientY- cowY) < 15) {
+    $('#cowImg').attr('src', 'cow.jpg');
     $('#cowImg').addClass('animate-in')
     audio = new Audio('Cow-moo-sound.mp3')
     setTimeout(function(){
@@ -78,6 +79,7 @@ function checkCow(e) {
 }
 
 #cowImg {
+  height: 100%;
   width: 100%; 
   opacity: 0;
 }
